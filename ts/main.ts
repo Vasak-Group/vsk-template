@@ -47,6 +47,12 @@ let Stack = {
 		new StackColorScheme(
 			document.getElementById('dark-mode-toggle') as HTMLElement
 		);
+
+		// Add navbar toggler EventListener
+		const navbarToggler = document.querySelector('.navbar-toggler');
+		navbarToggler.addEventListener('click', function () {
+			navbarToggler.classList.toggle('active');
+		});
 	},
 };
 

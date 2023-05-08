@@ -5,8 +5,8 @@
  *   @website: https://jimmycai.com
  *   @link: https://github.com/CaiJimmy/hugo-theme-stack
  */
-import StackColorScheme from './colorScheme';
-import { setNavBarOnScroll } from './onScrollElemnts';
+import StackColorScheme from './functions/colorScheme';
+import { setNavBarOnScroll } from './functions/onScrollElemnts';
 
 let Stack = {
 	init: () => {
@@ -30,7 +30,7 @@ let Stack = {
 
 			copyButton.addEventListener('click', () => {
 				navigator.clipboard
-					.writeText(codeBlock.textContent)
+					.writeText(codeBlock.textContent as string)
 					.then(() => {
 						copyButton.textContent = copiedText;
 
@@ -40,12 +40,13 @@ let Stack = {
 					})
 					.catch((err) => {
 						alert(err);
-						console.log('Something went wrong', err);
 					});
 			});
 		});
 
-		new StackColorScheme(document.getElementById('dark-mode-toggle'));
+		new StackColorScheme(
+			document.getElementById('dark-mode-toggle') as HTMLElement
+		);
 	},
 };
 

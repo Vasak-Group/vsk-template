@@ -6,6 +6,7 @@ class StackColorScheme {
 	private systemPreferScheme: colorScheme;
 
 	constructor(toggleEl: HTMLElement) {
+		this.systemPreferScheme = 'dark';
 		this.bindMatchMedia();
 		this.currentScheme = this.getSavedScheme();
 

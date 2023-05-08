@@ -1,5 +1,5 @@
 async function setNavBarOnScroll() {
-	const headerNavbar = document.querySelector('.navbar-area');
+	const headerNavbar = document.querySelector('.navbar-area') as HTMLElement;
 	const sticky = headerNavbar?.offsetTop;
 	if (window.scrollY > sticky) {
 		headerNavbar?.classList.add('sticky');

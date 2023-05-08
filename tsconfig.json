@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"module": "amd",
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"paths": {
+			"*": ["*"]
+		},
+		"lib": ["es2020", "dom"],
+		"outFile": "./dist/main.js"
+	}
+}

@@ -5,12 +5,19 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build:css": "node-sass scss/style.scss dist/style.min.css --output-style compressed"
+		"build:css": "node-sass scss/style.scss dist/style.min.css --output-style compressed",
+		"build:js": "ts ts/main.ts",
+		"minify:js": "esbuild dist/main.js --minify --outfile=dist/main.min.js",
+		"build": "npm run build:css && npm run build:js && npm run minify:js"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
+		"esbuild": "^0.17.18",
 		"node-sass": "^8.0.0"
+	},
+	"dependencies": {
+		"ts": "^0.2.2"
 	}
 }

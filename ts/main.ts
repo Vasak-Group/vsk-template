@@ -1,14 +1,12 @@
-/*!
- *   Hugo Theme Stack
- *
- *   @author: Jimmy Cai
- *   @website: https://jimmycai.com
- *   @link: https://github.com/CaiJimmy/hugo-theme-stack
- */
 import StackColorScheme from './functions/colorScheme';
 import { setNavBarOnScroll } from './functions/onScrollElemnts';
+import { scrollTo } from './functions/scrollTo';
+// @ts-ignore
+import * as WOW from './libs/wow.min.js';
+// @ts-ignore
+import * as counterUp from './libs/counterUp.min.js';
 
-let Stack = {
+const Stack = {
 	init: () => {
 		/**
 		 * Add copy button to code block
@@ -50,9 +48,27 @@ let Stack = {
 
 		// Add navbar toggler EventListener
 		const navbarToggler = document.querySelector('.navbar-toggler');
-		navbarToggler.addEventListener('click', function () {
-			navbarToggler.classList.toggle('active');
+		navbarToggler?.addEventListener('click', function () {
+			navbarToggler?.classList.toggle('active');
 		});
+
+		// Init WoW.js
+		new WOW().init();
+
+		// Init counterUp.js
+		const cu = new counterUp({
+			start: 0,
+			duration: 2000,
+			intvalues: true,
+			interval: 100,
+		});
+		cu.start();
+
+		// Add Scroll to Top
+		const scrollTop = document.querySelector('.scroll-top') as HTMLElement;
+		scrollTop.onclick = function () {
+			scrollTo(document.documentElement as HTMLElement);
+		};
 	},
 };
 
@@ -68,7 +84,6 @@ declare global {
 		Stack: any;
 	}
 }
-
 window.Stack = Stack;
 window.onscroll = function () {
 	setNavBarOnScroll();

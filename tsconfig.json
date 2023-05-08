@@ -2,6 +2,8 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"module": "amd",
+		"allowJs": true,
+		"checkJs": false,
 		"removeComments": true,
 		"preserveConstEnums": true,
 		"paths": {

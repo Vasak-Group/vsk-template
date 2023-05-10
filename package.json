@@ -3,21 +3,19 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
+	"type": "commonjs",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build:css": "node-sass scss/style.scss dist/style.min.css --output-style compressed",
-		"build:js": "ts ts/main.ts",
-		"minify:js": "esbuild dist/main.js --minify --outfile=dist/main.min.js",
-		"build": "npm run build:css && npm run build:js && npm run minify:js"
+		"build:js": "esbuild js/main.js --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=dist/js/main.min.js",
+		"build": "npm run build:css && npm run build:js"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
 		"esbuild": "^0.17.18",
+		"glob": "^10.2.3",
 		"node-sass": "^8.0.0"
-	},
-	"dependencies": {
-		"ts": "^0.2.2"
 	}
 }

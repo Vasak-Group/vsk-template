@@ -58,6 +58,10 @@
 			li {
 				font-size: 16px;
 				line-height: 40px;
+
+				&.na {
+					text-decoration: line-through;
+				}
 			}
 		}
 

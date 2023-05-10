@@ -2,6 +2,7 @@
 	position: relative;
 	z-index: 2;
 	background: var(--bg-site-2);
+	transition: all 0.3s ease-out 0s;
 
 	.footer-widget {
 		.footer-desc {

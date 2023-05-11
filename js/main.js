@@ -142,36 +142,22 @@ export function scrollTo(element, to = 0, duration = 1000) {
  * Filtros de búsqueda
  */
 
-tns({
-	container: '.testimonial-active',
-	items: 1,
-	slideBy: 'page',
-	autoplay: false,
-	mouseDrag: true,
-	gutter: 0,
-	nav: false,
-	controlsText: [
-		'<i class="fa fa-arrow-left"></i>',
-		'<i class="fa fa-arrow-right"></i>',
-	],
-});
-
-imagesLoaded('#container', function () {
-	var elem = document.querySelector('.grid');
-	var iso = new Isotope(elem, {
-		itemSelector: '.grid-item',
-		masonry: { columnWidth: '.grid-item' },
+const testimonial = document.querySelector('.testimonial-active');
+if (testimonial !== null) {
+	tns({
+		container: '.testimonial-active',
+		items: 1,
+		slideBy: 'page',
+		autoplay: false,
+		mouseDrag: true,
+		gutter: 0,
+		nav: false,
+		controlsText: [
+			'<i class="fa fa-arrow-left"></i>',
+			'<i class="fa fa-arrow-right"></i>',
+		],
 	});
-	let filterButtons = document.querySelectorAll(
-		'.portfolio-btn-wrapper button'
-	);
-	filterButtons.forEach((e) =>
-		e.addEventListener('click', () => {
-			let filterValue = event.target.getAttribute('data-filter');
-			iso.arrange({ filter: filterValue });
-		})
-	);
-});
+}
 
 /**
  * Main

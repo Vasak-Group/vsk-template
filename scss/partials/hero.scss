@@ -200,6 +200,7 @@
 	transition: all 0.3s ease-out 0s;
 	background: var(--bg-site-2);
 	border-radius: var(--site-radius);
+	height: calc(100% - 30px);
 
 	&:hover {
 		box-shadow: 0px 0px 30px rgba(215, 224, 252, 0.45);

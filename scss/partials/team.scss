@@ -20,6 +20,7 @@
 		overflow: hidden;
 		transition: all 0.3s ease-out 0s;
 		color: #fff;
+		height: calc(100% - 40px);
 
 		&:hover {
 			box-shadow: 0px 0px 30px rgba(215, 224, 252, 0.45);

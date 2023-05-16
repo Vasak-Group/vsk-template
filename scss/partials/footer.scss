@@ -20,7 +20,7 @@
 			&.footer-links {
 				li {
 					a {
-						color: #6a7c92;
+						color: var(--text-color);
 						display: block;
 						line-height: 35px;
 						transition: all 0.3s;

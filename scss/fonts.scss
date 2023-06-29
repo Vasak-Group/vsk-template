@@ -5,4 +5,8 @@
 
 .vsk-font {
 	font-family: 'VSK', sans-serif;
+	background: var(--site-gradient) !important;
+	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	color: transparent !important;
 }

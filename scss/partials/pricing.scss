@@ -1,4 +1,6 @@
 .pricing-section {
+	background: var(--bg-site-2);
+
 	.pricing-btn ul {
 		display: inline-flex;
 		border: 1px solid var(--site-color);
@@ -11,10 +13,9 @@
 				font-size: 16px;
 				font-weight: 700;
 				color: (--text-title);
-				box-shadow: 0px 0px 47px rgba(161, 192, 255, 0.16);
 
 				&.active {
-					color: #fff;
+					color: var(--text-color);
 					background: var(--site-gradient);
 					background-size: 200%;
 					transition: all 0.3s ease-out 0s;
@@ -36,13 +37,14 @@
 		padding: 50px;
 		border-radius: 10px;
 		background: var(--bg-site-g);
-		box-shadow: 0px 0px 47px rgba(161, 192, 255, 0.16);
+		box-shadow: 0px 0px 47px var(--bg-site-2);
 		position: relative;
 		z-index: 1;
+		margin-top: 40px;
 
 		h4 {
 			margin-bottom: 25px;
-			color: #6a7c92;
+			color: var(--text-title);
 			font-weight: 600;
 		}
 
@@ -58,20 +60,24 @@
 			li {
 				font-size: 16px;
 				line-height: 40px;
+				color: var(--text-color) !important;
 
 				&.na {
 					text-decoration: line-through;
+					opacity: 0.3;
 				}
 			}
 		}
 
 		a {
 			margin-bottom: 20px;
+			color: var(--text-color);
 
 			&.border-btn:hover {
-				background: var(--site-color);
+				border: 0px;
+				background: var(--site-gradient);
 				opacity: 0.8;
-				color: #fff;
+				color: var(--bg-site-2);
 			}
 		}
 

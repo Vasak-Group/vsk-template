@@ -1,6 +1,25 @@
 .testimonial-section {
 	background-color: #eff2f9;
 	clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 89%);
+
+	.testimonial-logo-wrapper {
+		margin-bottom: 60px;
+
+		.img {
+			margin-right: 40px;
+			width: 116px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -21,27 +40,10 @@
 	}
 }
 
-.testimonial-section .testimonial-logo-wrapper {
-	margin-bottom: 60px;
-}
-
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
 	.testimonial-section .testimonial-logo-wrapper {
 		margin-bottom: 0;
 	}
-}
-
-.testimonial-section .testimonial-logo-wrapper .img {
-	margin-right: 40px;
-	width: 116px;
-}
-
-.testimonial-section .testimonial-logo-wrapper .img:last-child {
-	margin-right: 0;
-}
-
-.testimonial-section .testimonial-logo-wrapper .img img {
-	width: 100%;
 }
 
 .testimonial-section .testimonial-wrapper .single-testimonial {

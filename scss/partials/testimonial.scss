@@ -1,5 +1,5 @@
 .testimonial-section {
-	background-color: #eff2f9;
+	background-color: var(--bg-site-1);
 	clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 89%);
 
 	.testimonial-logo-wrapper {
@@ -118,10 +118,10 @@
 	height: 50px;
 	cursor: pointer;
 	z-index: 2;
-	color: #6a7c92;
+	color: var(--bg-color-1);
 	font-size: 20px;
-	background: white;
-	border: 1px solid var(--site-color);
+	background: var(--bg-site-2);
+	border: 0px;
 	padding: 2px 5px;
 	border-radius: 50%;
 	transition: all 0.3s ease-out 0s;
@@ -129,7 +129,8 @@
 
 .testimonial-wrapper .tns-controls button:hover {
 	color: #fff;
-	background: var(--site-color);
+	background: var(--site-gradient);
+	transition: all 0.3s ease-out 0s;
 }
 
 .testimonial-wrapper .tns-controls button:first-child {

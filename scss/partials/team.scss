@@ -15,28 +15,20 @@
 	}
 
 	.single-team {
-		border-radius: var(--site-radius);
-		background: var(--site-gradient);
+		margin: 10px;
+		width: 300px;
 		overflow: hidden;
 		transition: all 0.3s ease-out 0s;
 		color: #fff;
-		height: calc(100% - 40px);
-
-		&:hover {
-			box-shadow: 0px 0px 30px rgba(215, 224, 252, 0.45);
-
-			.team-img .team-social {
-				opacity: 1;
-				visibility: visible;
-			}
-		}
 
 		.team-img {
+			margin-top: -70px;
 			overflow: hidden;
 			position: relative;
 
-			img {
-				width: 100%;
+			img{
+				border-radius: 50%;
+				padding: 80px;
 			}
 
 			.team-social {
@@ -45,18 +37,10 @@
 				height: 100%;
 				bottom: 0;
 				left: 0;
-				border-radius: 10px 10px 0px 0px;
-				background: linear-gradient(
-					30deg,
-					var(--site-color-2) 0%,
-					transparent 60%
-				);
 				display: flex;
 				align-items: flex-end;
 				justify-content: center;
-				padding-bottom: 15px;
-				opacity: 0;
-				visibility: hidden;
+				padding-bottom: 40px;
 				transition: all 0.3s ease-out 0s;
 
 				ul {
@@ -85,16 +69,23 @@
 		}
 
 		.team-info {
+			margin-top: -110px;
 			padding: 25px;
+			padding-top: 75px;
+			border-radius: var(--site-radius);
+			background: var(--bg-site-2);
+			border: 1px solid rgba(125, 125, 125, 0.2);
 
 			h4 {
 				margin-bottom: 5px;
+				color: var(--site-color-2);
 			}
 
 			span {
 				font-size: 16px;
 				display: block;
 				margin-bottom: 5px;
+				color: var(--site-color);
 			}
 		}
 	}

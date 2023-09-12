@@ -198,7 +198,7 @@ const Stack = {
 			});
 		});
 
-		new StackColorScheme(document.getElementById('dark-mode-toggle'));
+		//new StackColorScheme(document.getElementById('dark-mode-toggle'));
 
 		// Add navbar toggler EventListener
 		const navbarToggler = document.querySelector('.navbar-toggler');

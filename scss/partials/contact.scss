@@ -56,10 +56,10 @@
 			}
 
 			&:hover {
-				box-shadow: 0px 0px 30px rgba(215, 224, 252, 0.45);
+				box-shadow: 0px 0px 30px var(--bg-site-2);
 
 				.contact-icon {
-					box-shadow: 0px 0px 30px rgba(46, 87, 217, 0.45);
+					box-shadow: 0px 0px 30px var(--site-color);
 				}
 			}
 		}
@@ -124,7 +124,7 @@
 	transition: all 0.3s ease-out 0s;
 
 	&:hover {
-		box-shadow: 0px 0px 30px rgba(215, 224, 252, 0.45);
+		box-shadow: 0px 0px 30px var(--bg-site-2);
 	}
 
 	.contact-form,
@@ -134,14 +134,15 @@
 		select {
 			padding: 18px 25px;
 			border-radius: 30px;
-			border: 0px;
+			border: 1px solid var(--site-color);
 			background: var(--bg-site-g);
 			margin-bottom: 25px;
 			width: 100%;
 			transition: all 0.3s ease-out 0s;
+			color: var(--text-color);
 
 			&:focus {
-				border-color: var(--site-color);
+				border-color: var(--site-color-2);
 			}
 		}
 

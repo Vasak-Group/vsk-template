@@ -465,3 +465,13 @@ h4 a:hover {
 	background: var(--site-gradient);
 	border-radius: var(--site-radius);
 }
+
+.perspective-e {
+	transform-style: preserve-3d;
+	transform: perspective(1200px) rotateY(-45deg);
+}
+
+.perspective-s {
+	transform-style: preserve-3d;
+	transform: perspective(1200px) rotateY(45deg);
+}
